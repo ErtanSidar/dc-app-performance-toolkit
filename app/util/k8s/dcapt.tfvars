@@ -10,12 +10,12 @@
 # Unique name of your enterprise-scale test cluster.
 # This value can not be altered after the configuration has been applied.
 # ! REQUIRED !
-environment_name = "dcapt-product"
+environment_name = "dcapt-bitbucket-large"
 
 # Supported products: jira, confluence, bitbucket and bamboo.
 # e.g.: products = ["confluence"]
 # ! REQUIRED !
-products = ["product-to-deploy"]
+products = ["bitbucket"]
 
 # Default AWS region for DCAPT snapshots.
 region = "us-east-2"
@@ -33,7 +33,7 @@ resource_tags = {Name: "dcapt-testing"}
 # Bitbucket - ["m5.4xlarge"]
 # Crowd - ["m5.xlarge"]
 # ! REQUIRED !
-instance_types     = ["m5.2xlarge"]
+instance_types     = ["m5.4xlarge"]
 instance_disk_size = 100
 
 # Minimum and maximum size of the EKS cluster.
@@ -264,7 +264,7 @@ confluence_collaborative_editing_enabled = true
 # If storing license as plain-text is not a concern for this environment, feel free to uncomment the following line and supply the license here
 # Please make sure valid Bitbucket license is used without spaces and new line symbols.
 # ! REQUIRED !
-bitbucket_license = "bitbucket-license"
+bitbucket_license = "AAABqw0ODAoPeNp1kV9v0zAUxd/9Ka7EWyWnSWGCVooETcw2sSVVkwwY8OA6t6shtSPb6ei3x0tS/k2V7Bcf33t/59wXBXeQooDZHMJocfFyEUVweVvCLIzekKzbb9Dk28qisTGNSKKV48JlfI9x3XJjpN295a7h1kquAqH3xDpud8GNFKgslscW+88pu2M3+Yqtn+t/aavOiB23mHKHsSeY0zDyh5zvNirsZyvNsS9bvZ5FVydQdstlc460QHNAc53Gy8t5ST9Vd6/oh/v7K7oMo48jpu/IE1QOTexMh6ToNlYY2Tqp1fAymUyyvKTv8zVdrfO0SsrrPKNVwbwQJwY9Ug2bI7gdwggLTAldo4HW6O8oHHzZOdd+XUynDzr4B3HaDBUUh4pvAaQalHZQS+uM3HQOfWdpwWkQnXV67xcVEO/aMyuuxPNkBmM+G3nA3xaSNXtXspQuPz9hn8lrxPeBVeqH0o+KFCyL/aUXYUhy88CVtLyPJsUDNrr1Hku07mSc9Hl4/f/9pvgn1b5g9A1bbeBpBzAsAXjbQn3qbQk78KYbJm554wf8Ahhe9X4wLQIVAI7/SR+uPh2IU790kFil6gScw86jAhQG/6PL4aTIj+a1qkjYEeY8BBH06A==X02kk"
 
 # Number of Bitbucket application nodes
 # Note: For initial installation this value needs to be set to 1 and it can be changed only after Bitbucket is fully
@@ -272,7 +272,7 @@ bitbucket_license = "bitbucket-license"
 bitbucket_replica_count = 1
 
 # Supported versions by DCAPT: https://github.com/atlassian/dc-app-performance-toolkit#supported-versions
-bitbucket_version_tag = "7.21.16"
+bitbucket_version_tag = "8.9.5"
 
 # Shared home restore configuration.
 # Make sure Bitbucket version set in `bitbucket_version_tag` match the snapshot version.
